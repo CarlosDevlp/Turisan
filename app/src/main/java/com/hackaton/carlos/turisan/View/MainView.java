@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
@@ -280,13 +281,34 @@ public class MainView extends AppCompatActivity implements NavigationView.OnNavi
     public void startDescriptionActivity(View v) {
         startActivity(new Intent(this, DescriptionView.class));
     }
+    public void showToast(String txt){
+        LayoutInflater myInflater=LayoutInflater.from(this);
+        View view=myInflater.inflate(R.layout.activity_main_view,null);
+        Snackbar.make(view, txt, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK && requestCode == 0) {
-            String result = data.toURI();
-            // ...
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 0) {
+
+            if (resultCode == RESULT_OK) {
+                String contents = data.getStringExtra("SCAN_RESULT");
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(contents)));
+                }catch(Exception err){
+
+                }
+            }
+            if(resultCode == RESULT_CANCELED){
+                //handle cancel
+            }
         }
+        /*if (resultCode == Activity.RESULT_OK && requestCode == 0) {
+            String result = data.toURI();
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(result)));
+        }*/
     }
 
 

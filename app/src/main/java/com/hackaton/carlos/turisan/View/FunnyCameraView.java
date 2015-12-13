@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -32,6 +33,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 import Controller.FunnyCameraController;
 import Model.FunnyCamera;
@@ -175,7 +177,7 @@ public class FunnyCameraView extends AppCompatActivity  implements SurfaceHolder
 
             String encodedImage = Base64.encodeToString(data, Base64.DEFAULT);
 
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://webview/?url=http://photofunny-sanisidro.tk/node/19/")));
+            //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://webview/?url=http://photofunny-sanisidro.tk/node/19/")));
             hideActivity(v);
 
 
@@ -200,8 +202,32 @@ public class FunnyCameraView extends AppCompatActivity  implements SurfaceHolder
     }
 
     public void takePicture(View j){
-        mCamera.takePicture(this, null, null, this);
 
+        mCamera.takePicture(this, null, null, this);
+        String urlToShare = "http://photofunny-sanisidro.tk/node/19";
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        // intent.putExtra(Intent.EXTRA_SUBJECT, "Foo bar"); // NB: has no effect!
+        intent.putExtra(Intent.EXTRA_TEXT, urlToShare);
+
+        // See if official Facebook app is found
+        boolean facebookAppFound = false;
+        List<ResolveInfo> matches = getPackageManager().queryIntentActivities(intent, 0);
+        for (ResolveInfo info : matches) {
+            if (info.activityInfo.packageName.toLowerCase().startsWith("com.facebook.katana")) {
+                intent.setPackage(info.activityInfo.packageName);
+                facebookAppFound = true;
+                break;
+            }
+        }
+
+        // As fallback, launch sharer.php in a browser
+        if (!facebookAppFound) {
+            String sharerUrl = "https://www.facebook.com/sharer/sharer.php?u=" + urlToShare;
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(sharerUrl));
+        }
+
+        startActivity(intent);
     }
 
 
