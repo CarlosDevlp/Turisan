@@ -61,6 +61,9 @@ public class DescriptionView extends AppCompatActivity {
     }
 
     public void startCardBoard(View v){
+
+        if(mp.isPlaying())
+            mp.pause();
         Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.visita.sanisidro");
         startActivity(launchIntent);
 
