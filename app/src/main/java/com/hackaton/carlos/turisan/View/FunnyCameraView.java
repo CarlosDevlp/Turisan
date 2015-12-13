@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.hardware.Camera;
 import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
@@ -174,6 +175,7 @@ public class FunnyCameraView extends AppCompatActivity  implements SurfaceHolder
 
             String encodedImage = Base64.encodeToString(data, Base64.DEFAULT);
 
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://webview/?url=http://photofunny-sanisidro.tk/node/19/")));
             hideActivity(v);
 
 
@@ -198,30 +200,8 @@ public class FunnyCameraView extends AppCompatActivity  implements SurfaceHolder
     }
 
     public void takePicture(View j){
-        //View k=this.getWindow().getDecorView();
-        /*
-        View k=ctrl.getSurfaceView();
-        k.setDrawingCacheEnabled(true);
-        Bitmap bitmap = k.getDrawingCache();
-
-        File file = new File( Environment.getExternalStorageDirectory() + "/image.png");
-        */
         mCamera.takePicture(this, null, null, this);
-        /*mCamera.takePicture(myShutterCallback,
-                myPictureCallback_RAW, myPictureCallback_JPG);*/
 
-        /*
-        try{
-            file.createNewFile();
-            FileOutputStream ostream = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, ostream);
-            ostream.close();
-            Snackbar.make(k, Environment.getExternalStorageDirectory()+"", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            //Snackbar.make(v, "Se ha agregado una foto al album", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }*/
     }
 
 

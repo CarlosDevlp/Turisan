@@ -2,6 +2,7 @@ package com.hackaton.carlos.turisan.View;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.ClipData;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
@@ -92,6 +93,8 @@ public class MainView extends AppCompatActivity implements NavigationView.OnNavi
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
 
 
         //Tabhost principal
@@ -253,13 +256,23 @@ public class MainView extends AppCompatActivity implements NavigationView.OnNavi
 
 
     //iniciar otros activities
+    public void startQR(){
+        try {
+            Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+            intent.putExtra("SCAN_MODE", "QR_CODE_MODE"); // "PRODUCT_MODE for bar codes
+            startActivityForResult(intent, 0);
+        } catch (Exception e) {
+            Uri marketUri = Uri.parse("market://details?id=com.google.zxing.client.android");
+            Intent marketIntent = new Intent(Intent.ACTION_VIEW,marketUri);
+            startActivity(marketIntent);
+        }
+    }
+
+    public void startFunnyCameraActivity() {
+        startActivity(new Intent(this, FunnyCameraView.class));
+    }
+
     public void startFunnyCameraActivity(View v) {
-        //WebView w= new WebView(this);
-        //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://webview/?url=http://clipartzebraz.com/cliparts/smile-clip-art/cliparti1_smile-clip-art_08.jpg/")));
-
-        //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com.pe")));
-        //w.loadUrl("fb://webview/?url=http://clipartzebraz.com/cliparts/smile-clip-art/cliparti1_smile-clip-art_08.jpg/");
-
         startActivity(new Intent(this, FunnyCameraView.class));
     }
 
@@ -316,9 +329,9 @@ public class MainView extends AppCompatActivity implements NavigationView.OnNavi
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            this.startFunnyCameraActivity();
         } else if (id == R.id.nav_gallery) {
-
+            this.startQR();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
