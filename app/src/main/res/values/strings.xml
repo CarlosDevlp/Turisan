@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Turisan</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--Actividad de funny camera-->
+    <string name="title_activity_funny_camera_view">FunnyCameraView</string>
+    <string name="funny_back">Regresar</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

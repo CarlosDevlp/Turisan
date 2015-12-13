@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/Turism_card_view1"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Turism_img_1"
+                        android:scaleType="fitXY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                        />
+                    <!--android:src="@drawable/bosque_el_olivar"-->
+
+                    <TextView
+                        android:id="@+id/Turism_txt_1"
+                        android:textSize="25dp"
+                        android:paddingLeft="30dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/Turism_txtSubA_1"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Turism_txtSubB_1"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/Turism_card_view2"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Turism_img_2"
+                        android:scaleType="fitXY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                    />
+                    <!--  android:src="@drawable/observacion_de_aves" -->
+
+                    <TextView
+                        android:id="@+id/Turism_txt_2"
+                        android:textSize="25dp"
+                        android:paddingLeft="30dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/Turism_txtSubA_2"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Turism_txtSubB_2"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/Turism_card_view3"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="4dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Turism_img_3"
+                        android:scaleType="fitXY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                        />
+                    <!--android:src="@drawable/huaca_huallamarca_nw"-->
+
+                    <TextView
+                        android:id="@+id/Turism_txt_3"
+                        android:textSize="25dp"
+                        android:paddingLeft="30dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/Turism_txtSubA_3"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Turism_txtSubB_3"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/Turism_card_view4"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Turism_img_4"
+                        android:scaleType="fitXY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                        />
+                    <!--android:src="@drawable/iglesia_virgen_del_pilar"-->
+                    <TextView
+                        android:id="@+id/Turism_txt_4"
+                        android:textSize="25dp"
+                        android:paddingLeft="30dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:id="@+id/Turism_txtSubA_4"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Turism_txtSubB_4"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
