@@ -14,6 +14,54 @@
 
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:onClick="startDescriptionActivity"
+                android:id="@+id/Turism_card_view4"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Turism_img_4"
+                        android:scaleType="fitXY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                        />
+                    <!--android:src="@drawable/iglesia_virgen_del_pilar"-->
+                    <TextView
+                        android:id="@+id/Turism_txt_4"
+                        android:textSize="25dp"
+                        android:paddingLeft="30dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:id="@+id/Turism_txtSubA_4"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Turism_txtSubB_4"
+                        android:paddingLeft="25dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:onClick="startDescriptionActivity"
                 android:id="@+id/Turism_card_view1"
                 android:layout_gravity="center"
                 android:layout_width="fill_parent"
@@ -60,6 +108,7 @@
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:onClick="startDescriptionActivity"
                 android:id="@+id/Turism_card_view2"
                 android:layout_gravity="center"
                 android:layout_width="fill_parent"
@@ -103,6 +152,7 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
+                android:onClick="startDescriptionActivity"
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/Turism_card_view3"
                 android:layout_gravity="center"
@@ -146,51 +196,7 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/Turism_card_view4"
-                android:layout_gravity="center"
-                android:layout_width="fill_parent"
-                android:layout_height="200dp"
-                card_view:cardCornerRadius="4dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Turism_img_4"
-                        android:scaleType="fitXY"
-                        android:layout_width="fill_parent"
-                        android:layout_height="120dp"
-                        />
-                    <!--android:src="@drawable/iglesia_virgen_del_pilar"-->
-                    <TextView
-                        android:id="@+id/Turism_txt_4"
-                        android:textSize="25dp"
-                        android:paddingLeft="30dp"
-                        android:textStyle="bold"
-                        android:text=""
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-
-                    <TextView
-                        android:id="@+id/Turism_txtSubA_4"
-                        android:paddingLeft="25dp"
-                        android:text=""
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                    <TextView
-                        android:id="@+id/Turism_txtSubB_4"
-                        android:paddingLeft="25dp"
-                        android:text=""
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

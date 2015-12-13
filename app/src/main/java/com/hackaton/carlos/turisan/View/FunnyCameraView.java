@@ -174,6 +174,9 @@ public class FunnyCameraView extends AppCompatActivity  implements SurfaceHolder
 
             String encodedImage = Base64.encodeToString(data, Base64.DEFAULT);
 
+            hideActivity(v);
+
+
             File file = new File(Environment.getExternalStorageDirectory() +  "/image2.png");
             file.createNewFile();
             FileOutputStream ostream = new FileOutputStream(file);

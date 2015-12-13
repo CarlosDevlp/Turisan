@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.hackaton.carlos.turisan.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,6 +29,7 @@ public class CulturalView extends Fragment {
         this.container=container;
         //init();
         return inflater.inflate(R.layout.fragment_cultural_view, container, false);
+
     }
 
 

@@ -14,4 +14,5 @@
     <string name="title_activity_funny_camera_view">FunnyCameraView</string>
     <string name="funny_back">Regresar</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_description_view">DescriptionView</string>
 </resources>

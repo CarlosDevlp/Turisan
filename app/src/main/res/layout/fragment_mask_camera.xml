@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
         android:id="@+id/imageView2"
-        android:src="@drawable/mask"
+        android:src="@drawable/marco2"
         android:layout_gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
